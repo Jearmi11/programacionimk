@@ -1,29 +1,40 @@
 #include <stdio.h>
 #include "main.h"
 
-int tarifa1A(int consumo)
+
+
+int tarifa1E(int consumo)
 {     
     float consumo_basico = 0;
     float consumo_Ibasico = 0;
     float consumo_Ialto = 0;
     float consumo_Excedente = 0;
 
-    if (consumo >= 0 && consumo <= 100)
+    if (consumo >= 0 && consumo <= 300)
     {
         consumo_basico = 0.786 * consumo;
         printf("Consumo basico \n");   
     }
-     if (consumo >= 101 && consumo <= 150)
+     if (consumo >= 301 && consumo <= 750)
     {
-        consumo_basico = 100 * .786;
-        consumo_Ibasico = (consumo - 100) * 0.911;
+        consumo_basico = 300 * .786;
+        consumo_Ibasico = (consumo - 300) * 0.911;
         printf("Consumo I.bajo \n");           
     }
-     if (consumo >= 151)
+    if (consumo >= 751 && consumo <= 900)
     {
-        consumo_basico = 175 * .786; 
-        consumo_Ibasico = (150-100) * .911; 
-        consumo_Excedente = (consumo - 150) * 3.134;
+        consumo_basico = 300 * .786; 
+        consumo_Ibasico = (750-300) * .911; 
+        consumo_Ialto = (consumo - 750) * 1.177;
+        printf("Consumo I.alto \n");      
+
+    }
+     if (consumo >= 901)
+    {
+        consumo_basico = 300 * .786;
+        consumo_Ibasico = (750-300) * .911;
+        consumo_Ialto = (900-750) * 1.177;
+        consumo_Excedente = (consumo - 900) * 3.134;
 
         printf("Consumo excedente \n");    
     }

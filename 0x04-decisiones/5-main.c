@@ -28,22 +28,22 @@ int main()
         cobro = tarifa1A(consumo);
         break;
         case 'b':
-        printf("Opcion B");
+        cobro = tarifa1B(consumo);
         break;
         case 'c':
-        printf("Opcion C");
+        cobro = tarifa1C(consumo);
         break;
         case 'd':
         cobro = tarifa1D(consumo);
         break;
         case 'e':
-        printf("Opcion E");
+        cobro = tarifa1E(consumo);
         break;
         case 'f':
-        printf("Opcion F");
+        cobro = tarifa1F(consumo);
         break;
         case 'x':
-        printf("Opcion G");
+        cobro = tarifa1(consumo);
         break;
         default:
         printf("Opcion no valida\n");
