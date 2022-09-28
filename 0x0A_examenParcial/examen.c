@@ -5,7 +5,7 @@
 int main()
 {
     //declaro variables//
-    float volumen, densidad, costo;
+    float vol, densidad, costo;
     char opcion;
 
     //se imprime en pantalla//
@@ -17,45 +17,29 @@ int main()
     scanf("%c", &opcion);
 
     printf("Ingresa el volumen a envasar:\n");
-    scanf("%f", &volumen);
+    scanf("%f", &vol);
 
-    //empieza if//
 
-    if (volumen == 500)
-    {
-        costo = 1.006;
-    }
-    else if (volumen == 1000)
-    {
-        costo = 1.6816;
-    }
-    else if (volumen == 1500)
-    {
-        costo = 1.9610;
-    }
-    else
-    {
-        costo = 3.1038;
-    }
+
     
     // empieza switch case//
     switch(opcion)
     {
         case 'a': 
         densidad = 0.9;
-        area(volumen, densidad, costo);
+        area(vol, densidad, costo);
         break;
         case 'b': 
         densidad = 0.8;
-        area(volumen, densidad, costo);
+        area(vol, densidad, costo);
         break;
         case 'c': 
         densidad = 0.68;
-        area(volumen, densidad, costo);
+        area(vol, densidad, costo);
         break;
         case 'd': 
         densidad = 0.79;
-        area(volumen, densidad, costo);
+        area(vol, densidad, costo);
         break;
         default:
         printf("Opción no válida\n");
